@@ -1,0 +1,6 @@
+<users>
+    <user id="1" name="Surfing lesson" instructor="Rodrigo" start="November 17, 2021 06:00:00" end= "November 17, 2021 9:00:00"/>
+    <user id="2" name="Surfing lesson" instructor="Rodrigo" start="November 17, 2021 06:00:00" end= "November 17, 2021 10:00:00"/>
+    <user id="3" name="Surfing lesson" instructor="Balthazar" start="November 17, 2021 13:00:00" end= "November 17, 2021 17:00:00"/>
+    <user id="4" name="Surfing lesson" instructor="Balthazar" start="November 17, 2021 14:00:00" end= "November 17, 2021 16:00:00"/>
+</users>
