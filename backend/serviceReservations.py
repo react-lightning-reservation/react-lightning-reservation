@@ -1,31 +1,35 @@
 #!/usr/bin/env python3
+import json
 import web
 import xml.etree.ElementTree as ET
 
-tree = ET.parse('event_data.xml')
-root = tree.getroot()
+f = open('slot_data.json')
+data = json.load(f)
+f.close()
 
 urls = (
-    '/events', 'list_events',
-    '/events/(.*)', 'get_event'
+    '/slots', 'list_slots',
+    '/slots/(.*)', 'get_slot'
 )
 
 app = web.application(urls, globals())
 
-class list_events:        
+class list_slots:        
     def GET(self):
-        output = 'events:[';
-        for child in root:
-            print('child', child.tag, child.attrib)
-            output += str(child.attrib) + ','
-        output += ']';
-        return output
+        web.header('Access-Control-Allow-Origin', '*')
+        web.header('Access-Control-Allow-Credentials', 'true')
+        return json.dumps(data)
 
-class get_event:
+class get_slot:
     def GET(self, id):
-        for child in root:
-            if child.attrib['id'] == id:
-                return str(child.attrib)
+        web.header('Access-Control-Allow-Origin', '*')
+        web.header('Access-Control-Allow-Credentials', 'true')
+        # return json.dumps(data['slots'][1])
+        for s in data['slots']:
+            if s['id'] == id:
+                return json.dumps(s)
+        web.notfound(self)
+        return "not found"
 
 if __name__ == "__main__":
     app.run()
