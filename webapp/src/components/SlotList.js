@@ -8,7 +8,7 @@ import Slot from './Slot';
 function SlotList(props) {
     const { isLoading, error, data, isFetching } = useQuery("repoData", () =>
         fetch(
-        "http://localhost:8080/slots"
+        "http://" + window.location.hostname + ":8080/slots"
         ).then((res) => res.json())
     );
     
@@ -23,7 +23,6 @@ function SlotList(props) {
                 <tbody>{data.slots.map((slot) => <Slot key={slot.id} slot={slot}/>)}</tbody>
             </Table>
             <div>{isFetching ? "Updating..." : ""}</div>
-            <ReactQueryDevtools initialIsOpen />
         </div>
     );
 }
