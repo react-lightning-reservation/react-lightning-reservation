@@ -1,1 +1,4 @@
 web.py==0.62
+googleapis-common-protos==1.53.0
+grpcio==1.41.1
+grpcio-tools==1.41.1

@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Button, Card } from 'react-bootstrap';
 import ReserveModal from './ReserveModal';
 
 function Slot(props) {
-    const [modalIsOpen,setModalIsOpen] = useState(false);
+    const [modalIsOpen,setModalIsOpen] = React.useState(false);
 
     return (
         <tr>

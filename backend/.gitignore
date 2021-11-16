@@ -1,0 +1,4 @@
+googleapis/*
+lightning.proto
+lightning_pb2.py
+lightning_pb2_grpc.py
