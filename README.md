@@ -1,3 +1,5 @@
+This project won the [first prize at the Latin America Bitcoin Conference 2021 Hackathon in El Salvador](video.md). 
+
 # React Lightning Reservation
 
 We are developing a React.JS button which corresponds to a booking of a single-customer event, such as a surfing lesson. 
