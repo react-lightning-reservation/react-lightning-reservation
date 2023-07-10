@@ -1,4 +1,4 @@
-This project won the [first prize at the Latin America Bitcoin Conference 2021 Hackathon in El Salvador](video.md). 
+This project won the [1st Place at the Latin America Bitcoin Conference 2021 Hackathon in El Salvador](video.md). 
 
 # React Lightning Reservation
 
